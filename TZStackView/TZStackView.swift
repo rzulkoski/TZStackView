@@ -124,13 +124,13 @@ public class TZStackView: UIView {
             removeHiddenListener(view)
             view.hidden = false
 
-            if let _ = view.layer.animationKeys() {
-                UIView.setAnimationDelegate(self)
-                animationDidStopQueueEntries.insert(TZAnimationDidStopQueueEntry(view: view, hidden: hidden), atIndex: 0)
-                UIView.setAnimationDidStopSelector("hiddenAnimationStopped")
-            } else {
+//            if let _ = view.layer.animationKeys() {
+//                UIView.setAnimationDelegate(self)
+//                animationDidStopQueueEntries.insert(TZAnimationDidStopQueueEntry(view: view, hidden: hidden), atIndex: 0)
+//                UIView.setAnimationDidStopSelector("hiddenAnimationStopped")
+//            } else {
                 didFinishSettingHiddenValue(view, hidden: hidden)
-            }
+//            }
         }
     }
     
